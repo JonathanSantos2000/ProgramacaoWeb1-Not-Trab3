@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../CSS/FormNewEmployee.css" />
+        <link rel="stylesheet" type="text/css" href="../CSS/Editar.css"/>  
+        <link rel="stylesheet" type="text/css" href="../CSS/Deletar.css"/> 
+        <link rel="stylesheet" type="text/css" href="../CSS/Tabelas.css"/>
+    </head>
+    <body> 
+        <hr>
+        <div id="MostrarForm">
+            <div id="conteinerBotao">
+                <input id="bt_AdicionarClasse" type="submit" value="Adicionar Classe " onclick="FormClasse()"> 
+                <input id="bt_AdicionarAlunos" type="submit" value="Adicionar Alunos " onclick="FormAlunos()">
+            </div>
+        </div>
+        <hr>
+            <div class="FormNewClasse">
+                <div id="FormClasse_content">
+                    <h1>Adicionando nova Classe de aula</h1><br><br>
+                    <form id="addNewEmployee">
+                        <label for="nomeClasse">Nome da classe:*</label>
+                        <input required type="text" name="nomeClasse" placeholder="Nome da classe">
+        
+                        <div id="conteinerBotao">
+                            <input id="bt_Adicionar" type="submit" value="Adicionar " onclick="addClasse()"> 
+                            <input id="bt_Cancelar" type="submit" value="Cancelar">
+                        </div>
+                    </form> 
+                </div>
+            </div>
+            <div class="FormNewAluno">
+                <div id="FormAluno_content">
+                    <h1>Adicionando novo Aluno</h1><br><br>
+                    <form id="addNewEmployee">
+                        <label for="nome">Nome:*</label>
+                        <input required type="text" name="nome" placeholder="nome">
+                        
+                        <label for="Serie">Classe:*</label>
+                        <select name="Serie" id="listaClasse">
+                            
+                        </select>
+                        <label for="idade">Idade:*</label>
+                        <input required type="text" name="idade" placeholder="idade">
+
+        
+                        <div id="conteinerBotao">
+                            <input id="bt_Adicionar" type="submit" value="Adicionar " onclick="addAluno()"> 
+                            <input id="bt_Cancelar" type="submit" value="Cancelar">
+                        </div>
+                    </form> 
+                </div>
+            </div>
+            <hr>
+            <div id="MostrarTabela">
+                <div id="conteinerBotao">
+                    <input id="bt_MostraClasse" type="submit" value="Mostra Classe " onclick="MostraClasse()"> 
+                    <input id="bt_MostraAlunos" type="submit" value="Mostra Alunos " onclick="MostraAlunos()">
+                </div>
+            </div>
+           <hr>
+            <div class="tabClasse">
+                <table id="tabClasse_content">
+                    <thead>
+                        <tr>
+                            <th colspan="3"><h1 style="text-align: center;">Classes</h1></th>
+                        </tr>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="demo">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tabAluno">
+                <table id="tabAluno_content">
+                    <thead>
+                        <tr>
+                            <th colspan="5"><h1 style="text-align: center;">Alunos</h1></th>
+                        </tr>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Classe</th>
+                            <th>Idade</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="demo2">
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+            <div class="editClasse">
+                <div class="editClasse_content">
+                    <form>
+                        <h1>Editar Classe</h1><br>
+                        <label for="nome"><b>Nome</b></label>
+                        <input type="text" name="nomeEditClasse" required>
+
+                        <input id="bt_Salvar" type="submit" value="Salvar" onclick="salvarEditarClasse()"> 
+                        <input id="bt_CancelarEdit" type="submit" value="Cancelar" onclick="sairEditClasse()">
+                    </form>
+                </div>
+            </div>
+
+            <div class="deleteClasse">
+                <div class="deleteClasse_content">
+                    <form>
+                        <h1>Excluir?</h1><br>
+                        <p id="textoExcluir"></p><br>
+
+                        <input id="bt_Deletar" type="submit" value="SIM" onclick="deletarClasse()"> 
+                        <input id="bt_DeleteEdit" type="submit" value="NÃO" onclick="sairDeleteClasse()">
+                    </form>
+                </div>
+            </div>
+            <!– Parte aluno ->
+            <div class="editAluno">
+                <div class="editAluno_content">
+                    <form>
+                        <h1>Editar Aluno</h1><br>
+                        <label for="nome">Nome:*</label>
+                        <input type="text" name="nomeEditAluno" placeholder="nome">
+                        
+                        <label for="Serie">Classe:*</label>
+                        <select name="SerieEditAluno" id="listaClasse">
+                            
+                        </select>
+                        <label for="idade">Idade:*</label>
+                        <input type="text" name="idadeEditALuno" placeholder="idade">
+
+                        <input id="bt_Salvar" type="submit" value="Salvar" onclick="salvarEditarAluno()"> 
+                        <input id="bt_CancelarEdit" type="submit" value="Cancelar" onclick="sairEditAluno()">
+                    </form>
+                </div>
+            </div>
+
+            <div class="deleteClasse">
+                <div class="deleteClasse_content">
+                    <form>
+                        <h1>Excluir?</h1><br>
+                        <p id="textoExcluir"></p><br>
+
+                        <input id="bt_Deletar" type="submit" value="SIM" onclick="deletarAluno()"> 
+                        <input id="bt_DeleteEdit" type="submit" value="NÃO" onclick="sairDeleteAluno()">
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+        <script src="../JavaScript/metodos.js"></script>
+    </body>
+</html>

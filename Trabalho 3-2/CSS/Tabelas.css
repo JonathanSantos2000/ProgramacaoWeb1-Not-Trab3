@@ -1,0 +1,79 @@
+.tabClasse{
+    display: flex;
+}
+
+#tabClasse_content {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #tabClasse_content td, #tabClasse_content th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 30px;
+  }
+  
+  #tabClasse_content tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #tabClasse_content tr:hover {background-color: #ddd;}
+  
+  #tabClasse_content th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4d4d4d;
+    color: white;
+  }
+
+   input[type=button] {
+    width: 40%;
+    background-color: #428BCA;
+    color: white;
+    margin-left: 5%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+
+  .tabAluno{
+    display: flex;
+    display: none;
+}
+
+#tabAluno_content {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+  
+#tabAluno_content td, #tabAluno_content th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 30px;
+}
+
+#tabAluno_content tr:nth-child(even){background-color: #f2f2f2;}
+
+#tabAluno_content tr:hover {background-color: #ddd;}
+
+#tabAluno_content th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4d4d4d;
+  color: white;
+}
+
+  input[type=button] {
+  width: 40%;
+  background-color: #428BCA;
+  color: white;
+  margin-left: 5%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 30px;
+}

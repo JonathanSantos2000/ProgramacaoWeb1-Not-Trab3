@@ -1,0 +1,85 @@
+.editClasse{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.editClasse_content{
+    width: 400px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.editClasse_content input{
+    width: 90%;
+    display: block;
+    margin: 15px auto;
+}
+
+.editClasse_content label, h1{
+    width: 90%;
+    display: block;
+    margin: 15px auto;
+}
+
+.delete h1{
+    text-align: center;
+}
+
+#textoExcluir{
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+/* parte aluno */
+.editAluno{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.editAluno_content{
+    width: 400px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.editAluno_content input{
+    width: 90%;
+    display: block;
+    margin: 15px auto;
+}
+
+.editAluno_content label, h1{
+    width: 90%;
+    display: block;
+    margin: 15px auto;
+}
+
+.delete h1{
+    text-align: center;
+}
+
+#textoExcluir{
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
